@@ -1,0 +1,600 @@
+@font-face {
+  font-family: earthtracks;
+  src: url(../public/Asserts/fonts/Chopsic-K6Dp.ttf);
+}
+
+@font-face {
+  font-family: Nipok;
+  src: url(../public/Asserts/fonts/Chopsic-K6Dp.ttf);
+}
+
+@font-face {
+  font-family: WendyOne;
+  src: url(../public/Asserts/fonts/Chopsic-K6Dp.ttf);
+}
+
+html, body {
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #0c0b0b;
+}
+
+
+/* ---------------------- Navbar ----------------------  */
+
+.navbar {
+  background-color: rgb(5, 5, 5);
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  }
+
+.navbar .nav-link {
+  font-family: earthtracks;
+  background-image: linear-gradient(to right, #009dff, #ffffff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+}
+
+.navbar .nav-link:hover {
+  transition: .1s ease;
+  transform: scale(1.1);
+}
+
+.navbar .nav-item {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+ @media (max-width: 770px) {
+  .navbar .nav-link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    padding: 7px;
+  }
+  .navbar .nav-link {
+      transform: translateY(-10px);
+  }
+}
+
+
+  
+/* ---------------------- Herosection ----------------------  */
+
+
+.hero-section video {
+  width: 100%;
+  height: 100%;
+}
+.hero-section #player-overlay-mobile {
+  display: none;
+}
+
+.hero-section h1 {
+  position: absolute;
+  top: 5%;
+  font-family: Nipok;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 50px;
+  z-index: 100;
+  background-image: linear-gradient(to right, #0099f7, #ffffff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 30px;
+}
+
+.hero-section .links {
+  margin-top: -75px;
+  z-index: 1000;
+  position: absolute;
+  font-family: Nipok;
+  left: 35%;
+  text-align: center;
+  transform: translateX(-25%) translateY(-50%);
+}
+
+@media (max-width: 1100px) {
+ 
+.hero-section h1 {
+    font-size: 40px;
+  } 
+  .hero-section .ul {
+  margin-left: -90px;   
+  margin-top: 60px;
+ }
+}
+
+@media (max-width: 800px) {
+  .hero-section h1 {
+    font-size: 35px;
+  }
+.hero-section .ul {
+  transform: translateX(26%);
+  margin-top: 60px;
+}
+}
+
+@media (max-width: 710px) {
+  .hero-section h1 {
+    margin-top: 40px; 
+ }
+  .hero-section .ul {
+    margin-top: 60px;
+    transform: scale(0.9); 
+    transform: translateX(23%);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 32px;
+  }
+  .hero-section .ul {
+    margin-left: -20px;
+    transform: scale(0.8); 
+  }
+}
+
+@media (max-width: 550px) {
+#myvideo {
+  height: 300px;
+  object-fit: cover;
+}
+}
+
+@media (max-width: 500px) {
+  .hero-section .ul {
+    margin-top: 70px;
+    margin-left: -47px;
+    transform: scale(0.7); 
+   } 
+    .hero-section h1 {
+     font-size: 28px;
+    }
+}
+
+@media (max-width: 400px) {
+  .hero-section .ul {
+    margin-left: -50px;
+  }
+}
+
+.ul {
+  display: flex;
+  transform: translateX(40%);
+  justify-content: center;
+}
+
+.ul li {
+  position: relative;
+  display: block;
+  color: #666;
+  font-size: 30px;
+  height: 60px;
+  width: 60px;
+  background: #171515;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0px 15px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.ul li:before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: 50%;
+  transform: scale(.9);
+  z-index: -1;
+  transition: .5s;
+}
+.ul li:nth-child(1):before{
+  background: #4267B2;
+}
+.ul li:nth-child(2):before{
+  background: #1DA1F2;
+}
+.ul li:nth-child(3):before{
+  background: #E1306C;
+}
+
+.ul li:hover:before{
+  filter: blur(3px);
+  transform: scale(1.2);
+}
+.ul li:nth-child(1):hover:before{
+  box-shadow: 0 0 15px #4267B2;
+}
+.ul li:nth-child(2):hover:before{
+  box-shadow: 0 0 15px #1DA1F2;
+}
+.ul li:nth-child(3):hover:before{
+  box-shadow: 0 0 15px #E1306C;
+}
+
+.ul li:nth-child(1):hover{
+  color: #456cba;
+  box-shadow: 0 0 15px #4267B2;
+  text-shadow: 0 0 15px #4267B2;
+}
+.ul li:nth-child(2):hover{
+  color: #26a4f2;
+  box-shadow: 0 0 15px #1DA1F2;
+  text-shadow: 0 0 15px #1DA1F2;
+}
+.ul li:nth-child(3):hover{
+  color: #e23670;
+  box-shadow: 0 0 15px #E1306C;
+  text-shadow: 0 0 15px #E1306C;
+}
+
+/* ---------------------- Navbar ----------------------  */
+
+
+#about {
+  margin-top: -7px;
+  background-image: linear-gradient(to right, #0099f7, #dd2320);
+  padding-bottom: 100px;  
+  max-width: 100%;
+}
+
+.about {
+  color: linear-gradient(to right, #0099f7, #fff);
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+.about h1 {
+  font-family: Nipok;
+  font-size: 30px ;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  text-align: center;
+  color: #0c0b0b;
+}
+
+.about p {
+  font-family: earthtracks;
+  font-weight: 200;
+  padding-left: 70px;
+  letter-spacing: 2px;
+  word-spacing: 10px;
+  font-size: 16px;
+  z-index: 10;
+  padding-top: 28px;
+  line-height: 35px;
+  color: #181717;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .about p {
+    font-size: 15px;
+    padding: 20px;
+    line-height: 31px;
+    letter-spacing: 2px;  
+ }
+}
+
+@media (max-width: 500px) {
+  .about h1 {
+    font-size: 25px ;
+  }
+  .about p {
+    font-size: 13px;
+  }
+}
+/* ---------------------- Tokenomics ----------------------  */
+
+
+#tokenomics {
+  padding-bottom: 100px;
+}
+
+#toke {
+  background-image: linear-gradient(to right, #097ec7, #eee4e4);
+  font-family: Nipok;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 22px;
+  text-align: center;
+  border-radius: 20px;
+  color: #0c0b0b;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-sell h1 {
+  color: #097ec7;
+  font-family: Nipok;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.buy-sell .col-4 {
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.buy-sell .table {
+  text-align: center;
+  background-color: #4d4c4c;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+.buy-sell .table:hover {
+  background-color: #808080;
+}
+
+.buy-sell .table h4 {
+  font-family: Nipok;
+  margin-top: 4px;
+  font-size: 24px;
+  margin-bottom: 0px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.buy-sell .table h5 {
+  font-family: earthtracks;
+  color: #000000;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.buy-sell .table-bottom {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  #mg-top {
+    margin-top: -40px;
+  }
+  #toke {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  #toke {
+    font-size: 20px;
+    padding: 18px;
+    width: 230px;
+    margin-bottom: -10px;
+  }
+  #mg-top {
+    margin-top: -50px;
+  }
+  .buy-sell h1 {
+    font-size: 20px;
+  }
+  .buy-sell .table h4 {
+    font-size: 20px;
+  }
+  .buy-sell .table h5 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 330px) {
+.buy-sell .table h4 {
+  font-size: 17px;
+}
+.buy-sell .table h5 {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 300px) {
+  #toke {
+      width: 200px;
+    padding: 17px;
+  }
+}
+
+/* ---------------------- Howtobuy ----------------------  */
+
+
+.howtobuy {
+  padding-bottom: 100px;
+}
+
+.howtobuy h1 {
+  background-image: linear-gradient(to right, #097ec7, #eee4e4);
+  font-family: Nipok;
+  font-size: 30px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  padding: 22px;
+  text-align: center;
+  border-radius: 20px;
+  color: #0c0b0b;
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.howtobuy h5 {
+  font-family: Nipok;
+  color: #097ec7;
+  font-size: 20px;
+  margin-top: 40px;
+  letter-spacing: 3px;
+}
+
+.howtobuy p {
+  font-family: earthtracks;
+  opacity: 0.9;
+  letter-spacing: 2px;
+  color: #d4d4d3;
+  font-size: 16px;
+}
+
+@media (max-width: 1000px) {
+  .howtobuy {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 500px) {
+  .howtobuy h1 {
+    font-size: 20px;
+    padding: 18px;
+    width: 230px;
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+  .howtobuy h5 {
+    font-size: 18px;
+  }
+  .howtobuy p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 300px) {
+  .howtobuy h1 {
+    width: 200px;
+    padding: 17px;
+  }
+}
+
+/* ---------------------- Roadmap ----------------------  */
+
+.roadmap {
+  background-image: linear-gradient(to right, #097ec7, #f01414);
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.roadmap h1 {
+  text-align: center;
+  color: rgb(12, 11, 11);
+  font-family: Nipok;
+  padding-bottom: 30px;
+  font-size: 30px;
+}
+
+.roadmap h2 {
+  color: rgb(12, 11, 11);
+  font-family: Nipok;
+  font-size: 22px;
+  text-align: center;
+  padding: 10px;
+}
+.roadmap ul {
+  padding: 0px;
+  margin-top: 30px;
+}
+
+.roadmap ul li {
+  text-align: center;
+  color: rgb(12, 11, 11);
+  font-family: earthtracks;
+  list-style-type: none;
+  line-height: 60px;
+  opacity: 0.9;
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .roadmap ul {
+    margin-top: 5px;
+  }
+  .roadmap h1 {
+    padding-bottom: 25px;
+  }
+  .roadmap h2 {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .roadmap h1 {
+    padding-bottom: 25px;
+    font-size: 35px;
+    font-size: 25px;
+  }
+  .roadmap h2 {
+    margin-top: 20px;   
+    font-size: 20px;  
+  }
+  .roadmap ul li {
+    font-size: 16px;
+  }
+}
+
+
+/* ---------------------- Footer ----------------------  */
+
+
+.footer {
+  background-color: rgb(12, 11, 11);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.footer p {
+  font-family: earthtracks;
+  padding-top: 20px;
+  color: #ccc0c0;
+  text-align: center;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.footer h6 {
+  color: #3d3737;
+  font-family: Nipok;
+  text-align: center;
+  padding-top: 9px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .footer h6 {
+    font-size: 10px;
+  }
+  .footer p {
+    font-size: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
